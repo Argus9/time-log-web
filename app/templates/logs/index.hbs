@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Date</th>
+    <th>Minutes Spent</th>
+  </tr>
+  {{#each model as |log|}}
+    <tr>
+      <td>{{log.id}}</td>
+      <td>{{log.date}}</td>
+      <td>{{log.minutesSpent}}</td>
+    </tr>
+  {{/each}}
+</table>
