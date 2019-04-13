@@ -3,12 +3,14 @@
     <th>ID</th>
     <th>Date</th>
     <th>Minutes Spent</th>
+    <th>Description</th>
   </tr>
   {{#each model as |log|}}
     <tr>
       <td>{{log.id}}</td>
       <td>{{moment-format log.date 'ddd MMM d YYYY'}}</td>
       <td>{{log.minutesSpent}}</td>
+      <td>{{log.workDescription}}</td>
     </tr>
   {{/each}}
 </table>

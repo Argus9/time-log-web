@@ -4,5 +4,6 @@ const { Model, attr } = DS;
 
 export default Model.extend({
   date: attr("date"),
-  minutesSpent: attr("number")
+  minutesSpent: attr("number"),
+  workDescription: attr("string")
 });
