@@ -1,3 +1,7 @@
+# TODO
+* Learn ember-simple-auth: https://github.com/simplabs/ember-simple-auth
+* Figure out how to mock its behavior with mirage
+
 # time-log-web
 
 This README outlines the details of collaborating on this Ember application.
