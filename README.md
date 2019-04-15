@@ -1,6 +1,7 @@
 # TODO
 * Learn ember-simple-auth: https://github.com/simplabs/ember-simple-auth
 * Figure out how to mock its behavior with mirage
+* This tutorial may help: https://emberigniter.com/mock-json-api-backend-with-mirage/
 
 # time-log-web
 
