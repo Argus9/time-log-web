@@ -1,4 +1,4 @@
-export default function() {
+export default function () {
 
   // These comments are here to help you get started. Feel free to delete them.
 
@@ -25,4 +25,7 @@ export default function() {
   */
 
   this.get("/logs");
+  this.post("/token", function () {
+    return { access_token: "success" };
+  });
 }

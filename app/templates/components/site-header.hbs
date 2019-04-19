@@ -3,8 +3,12 @@
     <h3>TimeLog</h3>
   </div>
   <div class="col text-right">
-    <a href="#">
-      <h3>Sign In</h3>
-    </a>
+    <h3>
+      {{#if session.isAuthenticated}}
+        <a href="#" {{action "signOut" (action signOutCallback)}}>Sign Out</a>
+      {{else}}
+        {{link-to "Sign In" "login"}}
+      {{/if}}
+    </h3>
   </div>
 </div>
