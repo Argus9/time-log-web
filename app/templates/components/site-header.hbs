@@ -1,14 +1,25 @@
-<div class="row">
-  <div class="col text-left">
-    <h3>TimeLog</h3>
+{{#bs-navbar as |navbar|}}
+  <div class="navbar-header">
+    {{navbar.toggle}}
+    <a class="navbar-brand" href="#">TimeLog</a>
   </div>
-  <div class="col text-right">
-    <h3>
-      {{#if session.isAuthenticated}}
-        <a href="#" {{action "signOut" (action signOutCallback)}}>Sign Out</a>
-      {{else}}
-        {{link-to "Sign In" "login"}}
-      {{/if}}
-    </h3>
-  </div>
-</div>
+  {{#navbar.content}}
+    {{#navbar.nav as |nav|}}
+      {{#nav.item}}
+        {{#nav.link-to "home"}}Home{{/nav.link-to}}
+      {{/nav.item}}
+      {{#nav.item}}
+        {{#nav.link-to "logs"}}Logs{{/nav.link-to}}
+      {{/nav.item}}
+    {{/navbar.nav}}
+    {{#navbar.nav class="ml-auto" as |nav|}}
+      {{#nav.item}}
+        {{#if session.isAuthenticated}}
+          <a class="nav-link" href="#" {{action "signOut" (action signOutCallback)}}>Sign Out</a>
+        {{else}}
+          {{#nav.link-to "login"}}Log In{{/nav.link-to}}
+        {{/if}}
+      {{/nav.item}}
+    {{/navbar.nav}}
+  {{/navbar.content}}
+{{/bs-navbar}}

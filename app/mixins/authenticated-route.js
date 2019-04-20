@@ -7,6 +7,7 @@ export default Mixin.create({
   beforeModel(transition) {
     if (!this.session.isAuthenticated) {
       transition.abort();
+      this.session.set('attemptedTransition', transition);
       this.transitionTo('login');
     }
   }
