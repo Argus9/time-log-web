@@ -9,6 +9,8 @@ export default Mixin.create({
       transition.abort();
       this.session.set('attemptedTransition', transition);
       this.transitionTo('login');
+    } else {
+      return this._super(...arguments);
     }
   }
 });
