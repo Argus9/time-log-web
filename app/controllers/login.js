@@ -8,10 +8,8 @@ export default Controller.extend({
     authenticate() {
       let { identification, password } = this.getProperties("identification", "password");
       this.session.authenticate("authenticator:oauth2", identification, password).catch((reason) => {
-        return this.set("errorMessage", reason.error || reason);
+        this.set("errorMessage", reason.error || reason);
       });
-
-      this.transitionToRoute(this.session.get('attemptedTransition.targetName') || "home");
     }
   }
 });
